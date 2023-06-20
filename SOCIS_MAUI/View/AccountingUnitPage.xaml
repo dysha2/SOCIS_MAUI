@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             xmlns:handlers="clr-namespace:SOCIS_MAUI.SearchHandlers"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="SOCIS_MAUI.View.AccountingUnitPage"
+             x:DataType="VM:AccountingUnitVM"
+             Title="Устройства">
+    <Shell.SearchHandler>
+        <handlers:AccountingUnitSearchHandler ItemSelectedAction="{x:Static VM:AccountingUnitVM.AccountingUnitAction}"
+                                     ShowsResults="True"  
+                                     Placeholder="Поиск"
+                                     SearchBoxVisibility="Expanded"
+                                     FontSize="18"
+                                     AccountingUnits="{x:Static VM:AccountingUnitVM.SearchAccountingUnits}">
+            <handlers:AccountingUnitSearchHandler.ItemTemplate>
+                <DataTemplate x:DataType="M:AccountingUnit">
+                    <StackLayout Margin="10">
+                        <Label Text="{Binding FullNameUnit.UnitType.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                        <Label Text="{Binding InvNum,StringFormat='Инв. № {0}',TargetNullValue='Инв. № отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                        <Label Text="{Binding SerNum,StringFormat='Серийный № {0}',TargetNullValue='Серийный № отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                        <Label Text="{Binding NetName,StringFormat='Имя в сети {0}',TargetNullValue='Имя в сети отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                    </StackLayout>
+                </DataTemplate>
+            </handlers:AccountingUnitSearchHandler.ItemTemplate>
+        </handlers:AccountingUnitSearchHandler>
+    </Shell.SearchHandler>
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding UpdateCollectionCommand}" EventName="Appearing"/>
+    </ContentPage.Behaviors>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding AccountingUnits}" Margin="10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="M:AccountingUnit">
+                            <Frame Margin="0,5,0,5">
+                                <StackLayout>
+                                    <Label Text="{Binding FullNameUnit.UnitType.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding InvNum,StringFormat='Инв. № {0}',TargetNullValue='Инв. № отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding SerNum,StringFormat='Серийный № {0}',TargetNullValue='Серийный № отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding NetName,StringFormat='Имя в сети {0}',TargetNullValue='Имя в сети отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding CurrentPlace.Name,StringFormat='Текущее место {0}',TargetNullValue='Текущее место отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={Type VM:AccountingUnitVM}},Path=AccountingUnitUpdateCommand}" CommandParameter="{Binding }"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="назад" Command="{Binding PreviousPageCommand}"/>
+                    <Label Text="{Binding CurrentPage}"/>
+                    <Label Text="из"/>
+                    <Label Text="{Binding Pages}"/>
+                    <Button Text="далее" Command="{Binding NextPageCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

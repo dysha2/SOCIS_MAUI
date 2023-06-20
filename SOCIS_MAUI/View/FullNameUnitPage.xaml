@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             xmlns:handlers="clr-namespace:SOCIS_MAUI.SearchHandlers"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="SOCIS_MAUI.View.FullNameUnitPage"
+             x:DataType="VM:FullNameUnitVM"
+             Title="Абстрактные устройства">
+    <Shell.SearchHandler>
+        <handlers:FullNameUnitSearchHandler ItemSelectedAction="{x:Static VM:FullNameUnitVM.FullNameUnitAction}"
+                                     ShowsResults="True"  
+                                     Placeholder="Поиск"
+                                     SearchBoxVisibility="Expanded"
+                                     FontSize="18"
+                                     FullNameUnits="{x:Static VM:FullNameUnitVM.SearchFullNameUnits}">
+            <handlers:FullNameUnitSearchHandler.ItemTemplate>
+                <DataTemplate x:DataType="M:FullNameUnit">
+                    <StackLayout Margin="10">
+                        <Label Text="{Binding Model}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                        <Label Text="{Binding ModelNo}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                    </StackLayout>
+                </DataTemplate>
+            </handlers:FullNameUnitSearchHandler.ItemTemplate>
+        </handlers:FullNameUnitSearchHandler>
+    </Shell.SearchHandler>
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding UpdateCollectionCommand}" EventName="Appearing"/>
+    </ContentPage.Behaviors>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="+" Command="{Binding AddFullNameUnitCommand}"/>
+                <CollectionView ItemsSource="{Binding FullNameUnits}" Margin="10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="M:FullNameUnit">
+                            <Frame Margin="0,5,0,5">
+                                <StackLayout>
+                                    <Label Text="{Binding UnitType.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Firm.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Model}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding ModelNo}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={Type VM:FullNameUnitVM}},Path=FullNameUnitUpdateCommand}" CommandParameter="{Binding }"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="назад" Command="{Binding PreviousPageCommand}"/>
+                    <Label Text="{Binding CurrentPage}"/>
+                    <Label Text="из"/>
+                    <Label Text="{Binding Pages}"/>
+                    <Button Text="далее" Command="{Binding NextPageCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

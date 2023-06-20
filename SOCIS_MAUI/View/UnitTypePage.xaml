@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             xmlns:handlers="clr-namespace:SOCIS_MAUI.SearchHandlers"
+             x:Class="SOCIS_MAUI.View.UnitTypePage"
+             x:DataType="VM:UnitTypeVM"
+             Title="Типы устройств">
+    <Shell.SearchHandler>
+        <handlers:UnitTypeSearchHandler ItemSelectedAction="{x:Static VM:UnitTypeVM.UnitTypeAction}"
+                                     ShowsResults="True"  
+                                     Placeholder="Поиск"
+                                     SearchBoxVisibility="Expanded"
+                                     FontSize="18"
+                                     UnitTypes="{x:Static VM:UnitTypeVM.SearchUnitTypes}">
+            <handlers:UnitTypeSearchHandler.ItemTemplate>
+                <DataTemplate x:DataType="M:UnitType">
+                    <Grid>
+                        <Label Margin="30" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                    </Grid>
+                </DataTemplate>
+            </handlers:UnitTypeSearchHandler.ItemTemplate>
+        </handlers:UnitTypeSearchHandler>
+    </Shell.SearchHandler>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="+" Command="{Binding AddUnitTypeCommand}"/>
+                <CollectionView ItemsSource="{Binding UnitTypes}" Margin="10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="M:UnitType">
+                            <Frame Margin="0,5,0,5">
+                                <Grid>
+                                    <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={Type VM:UnitTypeVM}},Path=UnitTypeUpdateCommand}" CommandParameter="{Binding }"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

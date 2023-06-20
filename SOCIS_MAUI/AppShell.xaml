@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SOCIS_MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:SOCIS_MAUI.View"
+    Shell.FlyoutBehavior="Flyout">
+    <ShellContent ContentTemplate="{DataTemplate view:AppLaunchPage}" Shell.FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"/>
+    <FlyoutItem Title="Кабинеты">
+        <ShellContent ContentTemplate="{DataTemplate view:PlacePage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Фирмы">
+        <ShellContent ContentTemplate="{DataTemplate view:FirmPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Типы устройств">
+        <ShellContent ContentTemplate="{DataTemplate view:UnitTypePage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Абстрактные устройства">
+        <ShellContent ContentTemplate="{DataTemplate view:FullNameUnitPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Устройства">
+        <ShellContent ContentTemplate="{DataTemplate view:AccountingUnitPage}"/>
+    </FlyoutItem>
+</Shell>

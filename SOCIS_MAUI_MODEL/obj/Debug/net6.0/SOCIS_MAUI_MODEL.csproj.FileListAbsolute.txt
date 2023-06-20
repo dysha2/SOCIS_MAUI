@@ -1,0 +1,14 @@
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\bin\Debug\net6.0\SOCIS_MAUI_MODEL.deps.json
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\bin\Debug\net6.0\SOCIS_MAUI_MODEL.dll
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\bin\Debug\net6.0\SOCIS_MAUI_MODEL.pdb
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.csproj.AssemblyReference.cache
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.AssemblyInfoInputs.cache
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.AssemblyInfo.cs
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.csproj.CoreCompileInputs.cache
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.dll
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\refint\SOCIS_MAUI_MODEL.dll
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.pdb
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\ref\SOCIS_MAUI_MODEL.dll
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\bin\Debug\net6.0\SOCIS_MAUI_MODEL.runtimeconfig.json
+D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI_MODEL\obj\Debug\net6.0\SOCIS_MAUI_MODEL.genruntimeconfig.cache

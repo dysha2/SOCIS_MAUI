@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             x:Class="SOCIS_MAUI.View.AccountingUnitEditPage"
+             x:DataType="VM:AccountingUnitEditVM"
+             Title="AccountingUnitEditPage">
+    <VerticalStackLayout>
+        <Label Text="{Binding FullNameUnit.UnitType.Name}"/>
+        <Label Text="{Binding FullNameUnit.Model,StringFormat='Модель {0}'}"/>
+        <Label Text="Id"/>
+        <Entry IsReadOnly="True" Text="{Binding Id}"/>
+        <Label Text="MAC"/>
+        <Entry Text="{Binding Mac}"/>
+        <Label Text="Серийный номер"/>
+        <Entry Text="{Binding SerNum}"/>
+        <Label Text="Имя в сети"/>
+        <Entry Text="{Binding NetName}"/>
+        <Label Text="Дата производства"/>
+        <Entry Text="{Binding ManufDate}"/>
+        <Label Text="Инвентарный номер"/>
+        <Entry Text="{Binding InvNum}"/>
+        <Label Text="Комментарий"/>
+        <Entry Text="{Binding Comment}"/>
+        <Label Text="{Binding Errors}"/>
+        <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
+        <Button Text="Удалить" Command="{Binding DeleteCommand}">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsAdminMode}" Value="false">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding Id}" Value="0">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,15 @@
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\bin\Debug\net6.0\HttpClientProj.exe
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\bin\Debug\net6.0\HttpClientProj.deps.json
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\bin\Debug\net6.0\HttpClientProj.runtimeconfig.json
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\bin\Debug\net6.0\HttpClientProj.dll
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\bin\Debug\net6.0\HttpClientProj.pdb
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.csproj.AssemblyReference.cache
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.AssemblyInfoInputs.cache
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.AssemblyInfo.cs
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.csproj.CoreCompileInputs.cache
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.dll
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\refint\HttpClientProj.dll
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.pdb
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\HttpClientProj.genruntimeconfig.cache
+D:\MyProgs\SOCIS_MAUI\HttpClientProj\obj\Debug\net6.0\ref\HttpClientProj.dll

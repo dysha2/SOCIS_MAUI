@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             x:DataType="VM:AppLaunchVM"
+             x:Class="SOCIS_MAUI.View.AppLaunchPage"
+             Title="Авторизация">
+    <VerticalStackLayout Padding="50,0,50,0">
+        <Label Text="Логин" HorizontalOptions="Center" />
+        <Entry Text="{Binding Login}" HorizontalOptions="Center" MinimumWidthRequest="300"  Placeholder="Введите логин" MaxLength="30"/>
+        <Label Text="Пароль" HorizontalOptions="Center" />
+        <Entry Text="{Binding Password}" IsPassword="True" MinimumWidthRequest="300" HorizontalOptions="Center" MaxLength="50" Placeholder="Введите пароль"/>
+        <Button Text="Войти" Command="{Binding AuthorizeCommand}"/>
+        <Label Text="{Binding Errors,Mode=OneWay}"/>
+    </VerticalStackLayout>
+</ContentPage> 

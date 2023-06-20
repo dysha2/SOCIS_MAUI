@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net6.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SOCIS_MAUI
+build_property.ProjectDir = D:\MyProgs\SOCIS_MAUI\SOCIS_MAUI\
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/AccountingUnitEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.AccountingUnitEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AccountingUnitEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AccountingUnitEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/AccountingUnitPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.AccountingUnitPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AccountingUnitPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AccountingUnitPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/AppLaunchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.AppLaunchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AppLaunchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AppLaunchPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/FirmEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.FirmEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FirmEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FirmEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/FirmPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.FirmPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FirmPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FirmPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/FullNameUnitEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.FullNameUnitEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FullNameUnitEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FullNameUnitEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/FullNameUnitPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.FullNameUnitPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FullNameUnitPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FullNameUnitPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/PlaceEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.PlaceEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PlaceEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PlaceEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/PlacePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.PlacePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PlacePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PlacePage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitTypeEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitTypeEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitTypeEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitTypeEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitTypePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitTypePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitTypePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitTypePage.xaml

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             
+             x:Class="SOCIS_MAUI.View.PlaceEditPage"
+             x:DataType="VM:PlaceEditVM"
+             Title="PlaceEditPage">
+
+    <VerticalStackLayout>
+        <Label Text="Id"/>
+        <Entry IsReadOnly="True" Text="{Binding Id}"/>
+        <Label Text="Название"/>
+        <Entry Text="{Binding Name}"/>
+        <Label Text="Описание"/>
+        <Entry Text="{Binding Description}"/>
+        <Label Text="{Binding Errors}"/>
+        <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
+        <Button Text="Удалить" Command="{Binding DeleteCommand}">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsAdminMode}" Value="false">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding Id}" Value="0">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
