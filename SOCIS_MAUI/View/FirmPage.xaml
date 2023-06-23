@@ -26,7 +26,7 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                <Button Text="+" Command="{Binding AddFirmCommand}"/>
+                <Button Text="+" Command="{Binding AddFirmCommand}" Margin="10,10,10,0"/>
                 <CollectionView ItemsSource="{Binding Firms}" Margin="10">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="M:Firm">

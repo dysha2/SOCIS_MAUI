@@ -48,6 +48,18 @@ namespace SOCIS_MAUI.ViewModel
             }
         }
         [RelayCommand]
+        private void UnitPlacesShow()
+        {
+            _dataTransferService.TransferPlace = _place;
+            _navigationService.NavigateToAsync(nameof(UnitPlacePage));
+        }
+        [RelayCommand]
+        private void ShortTermMovesShow()
+        {
+            _dataTransferService.TransferPlace = _place;
+            _navigationService.NavigateToAsync(nameof(ShortTermMovePage));
+        }
+        [RelayCommand]
         private async void Delete()
         {
             try

@@ -26,7 +26,7 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                <Button Text="+" Command="{Binding AddUnitTypeCommand}"/>
+                <Button Text="+" Command="{Binding AddUnitTypeCommand}" Margin="10,10,10,0"/>
                 <CollectionView ItemsSource="{Binding UnitTypes}" Margin="10">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="M:UnitType">

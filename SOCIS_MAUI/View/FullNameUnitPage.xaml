@@ -31,7 +31,7 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                <Button Text="+" Command="{Binding AddFullNameUnitCommand}"/>
+                <Button Text="+" Command="{Binding AddFullNameUnitCommand}" Margin="10,10,10,0"/>
                 <CollectionView ItemsSource="{Binding FullNameUnits}" Margin="10">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="M:FullNameUnit">
@@ -49,13 +49,20 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <StackLayout Orientation="Horizontal">
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
                     <Button Text="назад" Command="{Binding PreviousPageCommand}"/>
-                    <Label Text="{Binding CurrentPage}"/>
-                    <Label Text="из"/>
-                    <Label Text="{Binding Pages}"/>
-                    <Button Text="далее" Command="{Binding NextPageCommand}"/>
-                </StackLayout>
+                    <Label Text="{Binding CurrentPage,Converter={StaticResource ValueIncrementConverter}}" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="из" Grid.Column="2" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="{Binding Pages,Converter={StaticResource ValueIncrementConverter}}" Grid.Column="3" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Button Text="далее" Command="{Binding NextPageCommand}" Grid.Column="4"/>
+                </Grid>
             </StackLayout>
         </ScrollView>
     </Grid>

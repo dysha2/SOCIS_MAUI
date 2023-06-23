@@ -7,10 +7,14 @@
              Title="Авторизация">
     <VerticalStackLayout Padding="50,0,50,0">
         <Label Text="Логин" HorizontalOptions="Center" />
-        <Entry Text="{Binding Login}" HorizontalOptions="Center" MinimumWidthRequest="300"  Placeholder="Введите логин" MaxLength="30"/>
+        <Border>
+            <Entry Text="{Binding Login}" HorizontalOptions="Center" MinimumWidthRequest="300"  Placeholder="Введите логин" MaxLength="30"/>
+        </Border>
         <Label Text="Пароль" HorizontalOptions="Center" />
-        <Entry Text="{Binding Password}" IsPassword="True" MinimumWidthRequest="300" HorizontalOptions="Center" MaxLength="50" Placeholder="Введите пароль"/>
-        <Button Text="Войти" Command="{Binding AuthorizeCommand}"/>
+        <Border>
+            <Entry Text="{Binding Password}" IsPassword="True" MinimumWidthRequest="300" HorizontalOptions="Center" MaxLength="50" Placeholder="Введите пароль"/>
+        </Border>
+        <Button Text="Войти" Command="{Binding AuthorizeCommand}" Margin="0,20,0,20"/>
         <Label Text="{Binding Errors,Mode=OneWay}"/>
     </VerticalStackLayout>
 </ContentPage> 

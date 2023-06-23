@@ -8,6 +8,9 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.Id">
             <inheritdoc cref="F:SOCIS_MAUI.ViewModel.AccountingUnitEditVM._id"/>
@@ -38,6 +41,24 @@
         </member>
         <member name="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.DeleteCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.Delete"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.unitRespPersonsShowCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitRespPersonsShowCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitRespPersonsShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitRespPersonsShow"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.unitPlacesShowCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitPlacesShowCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitPlacesShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.UnitPlacesShow"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.shortTermMovesShowCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.ShortTermMovesShowCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.ShortTermMovesShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.ShortTermMovesShow"/>.</summary>
         </member>
         <member name="F:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.saveCommand">
             <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.AccountingUnitEditVM.SaveCommand"/>.</summary>
@@ -217,6 +238,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:SOCIS_MAUI.ViewModel.PlaceEditVM.Name">
             <inheritdoc cref="F:SOCIS_MAUI.ViewModel.PlaceEditVM._name"/>
@@ -226,6 +249,18 @@
         </member>
         <member name="P:SOCIS_MAUI.ViewModel.PlaceEditVM.Id">
             <inheritdoc cref="F:SOCIS_MAUI.ViewModel.PlaceEditVM._id"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.PlaceEditVM.unitPlacesShowCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.PlaceEditVM.UnitPlacesShowCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.PlaceEditVM.UnitPlacesShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.PlaceEditVM.UnitPlacesShow"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.PlaceEditVM.shortTermMovesShowCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.PlaceEditVM.ShortTermMovesShowCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.PlaceEditVM.ShortTermMovesShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.PlaceEditVM.ShortTermMovesShow"/>.</summary>
         </member>
         <member name="F:SOCIS_MAUI.ViewModel.PlaceEditVM.deleteCommand">
             <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.PlaceEditVM.DeleteCommand"/>.</summary>
@@ -254,6 +289,272 @@
         </member>
         <member name="P:SOCIS_MAUI.ViewModel.PlaceVM.AddPlaceCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.PlaceVM.AddPlace"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Id">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._id"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.DateTimeStart">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._DateTimeStart"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.DateTimeEndPlan">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._DateTimeEndPlan"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.DateTimeEndFact">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._DateTimeEndFact"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Place">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._Place"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Unit">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._Unit"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Places">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM._Places"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.goToAccountingUnitEditPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.GoToAccountingUnitEditPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.GoToAccountingUnitEditPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.GoToAccountingUnitEditPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.deleteCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Delete"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.saveCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM.Save"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.ShortTermMoveVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.CurrentPage">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM._currentPage"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.Pages">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM._pages"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.ShortTermMoves">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM._ShortTermMoves"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM.nextPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.NextPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.NextPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveVM.NextPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM.previousPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.PreviousPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.PreviousPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveVM.PreviousPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM.shortTermMoveUpdateCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.ShortTermMoveUpdateCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.ShortTermMoveUpdateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveVM.ShortTermMoveUpdate(SOCIS_MAUI_MODEL.Model.ShortTermMove)"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM.addShortTermMoveCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.AddShortTermMoveCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.AddShortTermMoveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveVM.AddShortTermMove"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.ShortTermMoveVM.appearingCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.ShortTermMoveVM.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.ShortTermMoveVM.Appearing"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.UnitPlaceEditVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Id">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._id"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Comment">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._Comment"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.DateStart">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._DateStart"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.DateEnd">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._DateEnd"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Place">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._Place"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Unit">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._Unit"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Places">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM._Places"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.goToAccountingUnitEditPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.GoToAccountingUnitEditPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.GoToAccountingUnitEditPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.GoToAccountingUnitEditPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.deleteCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Delete"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.saveCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceEditVM.Save"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.UnitPlaceVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.CurrentPage">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceVM._currentPage"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.Pages">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceVM._pages"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.UnitPlaces">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitPlaceVM._UnitPlaces"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceVM.nextPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.NextPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.NextPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceVM.NextPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceVM.previousPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.PreviousPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.PreviousPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceVM.PreviousPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceVM.unitPlaceUpdateCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.UnitPlaceUpdateCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.UnitPlaceUpdateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceVM.UnitPlaceUpdate(SOCIS_MAUI_MODEL.Model.UnitPlace)"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceVM.addUnitPlaceCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.AddUnitPlaceCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.AddUnitPlaceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceVM.AddUnitPlace"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitPlaceVM.appearingCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitPlaceVM.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitPlaceVM.Appearing"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Id">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._id"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.DateStart">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._DateStart"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.DateEnd">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._DateEnd"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Person">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._Person"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Unit">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._Unit"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Persons">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM._Persons"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.deleteCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Delete"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.saveCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM.Save"/>.</summary>
+        </member>
+        <member name="T:SOCIS_MAUI.ViewModel.UnitRespPersonVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.CurrentPage">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM._currentPage"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.Pages">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM._pages"/>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.UnitRespPersons">
+            <inheritdoc cref="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM._UnitRespPersons"/>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM.nextPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.NextPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.NextPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonVM.NextPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM.previousPageCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.PreviousPageCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.PreviousPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonVM.PreviousPage"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM.unitRespPersonUpdateCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.UnitRespPersonUpdateCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.UnitRespPersonUpdateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonVM.UnitRespPersonUpdate(SOCIS_MAUI_MODEL.Model.UnitRespPerson)"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM.addUnitRespPersonCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.AddUnitRespPersonCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.AddUnitRespPersonCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonVM.AddUnitRespPerson"/>.</summary>
+        </member>
+        <member name="F:SOCIS_MAUI.ViewModel.UnitRespPersonVM.appearingCommand">
+            <summary>The backing field for <see cref="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:SOCIS_MAUI.ViewModel.UnitRespPersonVM.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SOCIS_MAUI.ViewModel.UnitRespPersonVM.Appearing"/>.</summary>
         </member>
         <member name="T:SOCIS_MAUI.ViewModel.UnitTypeEditVM">
             <inheritdoc/>
@@ -447,6 +748,45 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateTimeStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateTimeStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateTimeEndPlan">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateTimeEndPlan" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateTimeEndFact">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateTimeEndFact" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Place">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Place" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Unit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Unit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Places">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Places" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShortTermMoves">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShortTermMoves" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateEnd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateEnd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UnitPlaces">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UnitPlaces" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Person">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Person" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Persons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Persons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UnitRespPersons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UnitRespPersons" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -501,10 +841,55 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateTimeStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateTimeStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateTimeEndPlan">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateTimeEndPlan" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateTimeEndFact">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateTimeEndFact" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Place">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Place" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Unit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Unit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Places">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Places" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShortTermMoves">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShortTermMoves" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateEnd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateEnd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UnitPlaces">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UnitPlaces" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Person">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Person" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Persons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Persons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UnitRespPersons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UnitRespPersons" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions">
             <summary>
             A helper type with generated validation stubs for types deriving from <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservableValidator"/>.
             </summary>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -587,6 +972,48 @@
             </summary>
             <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
             <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.PlaceVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.ShortTermMoveEditVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.ShortTermMoveEditVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.ShortTermMoveVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.ShortTermMoveVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.ShortTermMoveVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.UnitPlaceEditVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitPlaceEditVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitPlaceEditVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.UnitPlaceVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitPlaceVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitPlaceVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.UnitRespPersonEditVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitRespPersonEditVM"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.UnitRespPersonVM)">
+            <summary>
+            Creates a validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitRespPersonVM"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:SOCIS_MAUI.ViewModel.UnitRespPersonVM"/> objects.</returns>
         </member>
         <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(SOCIS_MAUI.ViewModel.UnitTypeEditVM)">
             <summary>

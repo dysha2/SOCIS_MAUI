@@ -27,7 +27,7 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                <Button Text="+" Command="{Binding AddPlaceCommand}"/>
+                <Button Text="+" Command="{Binding AddPlaceCommand}" Margin="10,10,10,0"/>
                 <CollectionView ItemsSource="{Binding Places}" Margin="10">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="M:Place">

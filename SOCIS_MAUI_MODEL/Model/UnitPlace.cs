@@ -1,20 +1,26 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 
 namespace SOCIS_MAUI_MODEL.Model
 {
-    public partial class UnitPlace
+    public partial class UnitPlace:ObservableObject
     {
         public int Id { get; set; }
         public int UnitId { get; set; }
-        public int PlaceId { get; set; }
-        public string? Comment { get; set; }
-        public DateTime DateStart { get; set; }
-        public DateTime? DateEnd { get; set; }
+        [ObservableProperty]
+        private int _PlaceId;
+        [ObservableProperty]
+        private string? _Comment;
+        [ObservableProperty]
+        private DateTime _DateStart;
+        [ObservableProperty]
+        private DateTime? _DateEnd;
         public int? WorkOnRequestId { get; set; }
-
-        public virtual Place Place { get; set; } = null!;
-        public virtual AccountingUnit Unit { get; set; } = null!;
+        [ObservableProperty]
+        private Place _Place = null!;
+        [ObservableProperty]
+        private AccountingUnit _Unit = null!;
         public virtual WorkOnRequest? WorkOnRequest { get; set; }
     }
 }

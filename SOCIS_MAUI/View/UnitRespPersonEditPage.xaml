@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             x:Class="SOCIS_MAUI.View.UnitRespPersonEditPage"
+             x:DataType="VM:UnitRespPersonEditVM"
+             Title="Ред. ответственного лица">
+    <VerticalStackLayout Margin="20">
+        <Label Text="{Binding Unit.FullNameUnit.UnitType.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="{Binding Unit.FullNameUnit.Model,StringFormat='Модель {0}'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="{Binding Unit.InvNum,StringFormat='Инв. № {0}',TargetNullValue='Инв. № отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="{Binding Unit.SerNum,StringFormat='Серийный № {0}',TargetNullValue='Серийный № отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+            <Label Text="{Binding Unit.NetName,StringFormat='Имя в сети {0}',TargetNullValue='Имя в сети отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+            <Label Text="Id"/>
+        <Border>
+            <Entry IsReadOnly="True" Text="{Binding Id}"/>
+        </Border>
+        <Label Text="Ответственный"/>
+        <Border>
+            <Picker ItemsSource="{Binding Persons}" SelectedItem="{Binding Person}" ItemDisplayBinding="{Binding FullName}"/>
+        </Border>
+        <Label Text="Дата начала"/>
+        <Border>
+            <Entry Text="{Binding DateStart}"/>
+        </Border>
+        <Label Text="Дата окончания"/>
+        <Border>
+            <Entry Text="{Binding DateEnd}">
+                <Entry.Triggers>
+                    <DataTrigger TargetType="Entry" Binding="{Binding Id}" Value="0">
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+        </Border>
+        <Label Text="{Binding Errors}"/>
+        <Button Text="Сохранить" Command="{Binding SaveCommand}" Margin="0,0,0,10"/>
+        <Button Text="Удалить" Command="{Binding DeleteCommand}" Margin="0,0,0,10">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsAdminMode}" Value="false">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding Id}" Value="0">
+                    <Setter Property="IsVisible" Value="false"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>

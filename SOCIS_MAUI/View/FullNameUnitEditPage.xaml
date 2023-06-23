@@ -5,21 +5,31 @@
              xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
              x:Class="SOCIS_MAUI.View.FullNameUnitEditPage"
              x:DataType="VM:FullNameUnitEditVM"
-             Title="FullNameUnitEditPage">
-    <VerticalStackLayout>
+             Title="Ред. абстрактного устройства">
+    <VerticalStackLayout Margin="20">
         <Label Text="Id"/>
-        <Entry IsReadOnly="True" Text="{Binding Id}"/>
+        <Border>
+            <Entry IsReadOnly="True" Text="{Binding Id}"/>
+        </Border>
         <Label Text="Модель"/>
-        <Entry Text="{Binding Model}" />
+        <Border>
+            <Entry Text="{Binding Model}" />
+        </Border>
         <Label Text="Номер модели"/>
-        <Entry Text="{Binding ModelNo}"/>
+        <Border>
+            <Entry Text="{Binding ModelNo}"/>
+        </Border>
         <Label Text="Фирма"/>
-        <Picker ItemsSource="{Binding Firms}" SelectedItem="{Binding Firm}" ItemDisplayBinding="{Binding Name}"/>
+        <Border>
+            <Picker ItemsSource="{Binding Firms}" SelectedItem="{Binding Firm}" ItemDisplayBinding="{Binding Name}"/>
+        </Border>
         <Label Text="Тип устройства"/>
-        <Picker ItemsSource="{Binding UnitTypes}" SelectedItem="{Binding UnitType}" ItemDisplayBinding="{Binding Name}"/>
+        <Border>
+            <Picker ItemsSource="{Binding UnitTypes}" SelectedItem="{Binding UnitType}" ItemDisplayBinding="{Binding Name}"/>
+        </Border>
         <Label Text="{Binding Errors}"/>
-        <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
-        <Button Text="Удалить" Command="{Binding DeleteCommand}">
+        <Button Text="Сохранить" Command="{Binding SaveCommand}" Margin="0,0,0,10"/>
+        <Button Text="Удалить" Command="{Binding DeleteCommand}" Margin="0,0,0,10">
             <Button.Triggers>
                 <DataTrigger TargetType="Button" Binding="{Binding IsAdminMode}" Value="false">
                     <Setter Property="IsVisible" Value="false"/>
@@ -29,7 +39,7 @@
                 </DataTrigger>
             </Button.Triggers>
         </Button>
-        <Button Text="Добавить реальное устройство" Command="{Binding AddAccountingUnitCommand}">
+        <Button Text="Добавить реальное устройство" Command="{Binding AddAccountingUnitCommand}" Margin="0,0,0,10">
             <Button.Triggers>
                 <DataTrigger TargetType="Button" Binding="{Binding Id}" Value="0">
                     <Setter Property="IsVisible" Value="false"/>

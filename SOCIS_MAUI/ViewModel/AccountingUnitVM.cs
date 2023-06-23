@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using HelpfulProjectCSharp.ASP;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -53,12 +54,21 @@ namespace SOCIS_MAUI.ViewModel
         [RelayCommand]
         private void UpdateCollection()
         {
-            Pages = _mainModel.GetAllAccountingUnits().Count / _pageSize;
-            AccountingUnits = _mainModel.GetAllAccountingUnits()
-                .Skip(CurrentPage * _pageSize)
-                .Take(_pageSize)
-                .ToObservableCollection();
-            OnPropertyChanged(nameof(AccountingUnits));
+            try
+            {
+                var units = _mainModel.GetAllAccountingUnits();
+                Pages = units.Count() % _pageSize == 0 ? units.Count() / _pageSize - 1 : units.Count() / _pageSize;
+                AccountingUnits = _mainModel.GetAllAccountingUnits()
+                    .Skip(CurrentPage * _pageSize)
+                    .Take(_pageSize)
+                    .ToObservableCollection();
+                OnPropertyChanged(nameof(AccountingUnits));
+            }
+            catch (Exception ex)
+            {
+                Errors = ValidateAndErrorsTools.GetInfo(ex);
+                OnPropertyChanged(Errors);
+            }
         }
     }
 }

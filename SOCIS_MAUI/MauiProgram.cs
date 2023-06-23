@@ -49,6 +49,12 @@ public static class MauiProgram
         builder.Services.AddTransient<FullNameUnitEditPage>();
         builder.Services.AddSingleton<AccountingUnitPage>();
         builder.Services.AddTransient<AccountingUnitEditPage>();
+        builder.Services.AddTransient<UnitPlacePage>();
+        builder.Services.AddTransient<UnitPlaceEditPage>();
+        builder.Services.AddTransient<ShortTermMovePage>();
+        builder.Services.AddTransient<ShortTermMoveEditPage>();
+        builder.Services.AddTransient<UnitRespPersonPage>();
+        builder.Services.AddTransient<UnitRespPersonEditPage>();
         //VM Reg
         builder.Services.AddSingleton<AppLaunchVM>();
 		builder.Services.AddSingleton<PlaceVM>();
@@ -61,7 +67,12 @@ public static class MauiProgram
         builder.Services.AddTransient<FullNameUnitEditVM>();
         builder.Services.AddSingleton<AccountingUnitVM>();
         builder.Services.AddTransient<AccountingUnitEditVM>();
-
+        builder.Services.AddTransient<UnitPlaceVM>();
+        builder.Services.AddTransient<UnitPlaceEditVM>();
+        builder.Services.AddTransient<ShortTermMoveVM>();
+        builder.Services.AddTransient<ShortTermMoveEditVM>();
+        builder.Services.AddTransient<UnitRespPersonVM>();
+        builder.Services.AddTransient<UnitRespPersonEditVM>();
         return builder.Build();
 	}
 }

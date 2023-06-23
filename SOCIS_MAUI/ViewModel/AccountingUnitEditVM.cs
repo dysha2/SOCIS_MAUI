@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HelpfulProjectCSharp.ASP;
-using IntelliJ.Lang.Annotations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -86,6 +85,24 @@ namespace SOCIS_MAUI.ViewModel
             }
         }
         [RelayCommand]
+        private void UnitRespPersonsShow()
+        {
+            _dataTransferService.TransferAccountingUnit = _AccountingUnit;
+            _navigationService.NavigateToAsync(nameof(UnitRespPersonPage));
+        }
+        [RelayCommand]
+        private void UnitPlacesShow()
+        {
+            _dataTransferService.TransferAccountingUnit = _AccountingUnit;
+            _navigationService.NavigateToAsync(nameof(UnitPlacePage));
+        }
+        [RelayCommand]
+        private void ShortTermMovesShow()
+        {
+            _dataTransferService.TransferAccountingUnit = _AccountingUnit;
+            _navigationService.NavigateToAsync(nameof(ShortTermMovePage));
+        }
+        [RelayCommand]
         private async void Save()
         {
             try
@@ -94,12 +111,12 @@ namespace SOCIS_MAUI.ViewModel
                 OnPropertyChanged(nameof(Errors));
                 if (HasErrors == false)
                 {
-                    _AccountingUnit.Mac=_Mac;
-                    _AccountingUnit.SerNum = _SerNum;
-                    _AccountingUnit.NetName = _NetName;
+                    _AccountingUnit.Mac=String.IsNullOrEmpty(_Mac)?null:_Mac;
+                    _AccountingUnit.SerNum = String.IsNullOrEmpty(_SerNum)?null:_SerNum;
+                    _AccountingUnit.NetName = String.IsNullOrEmpty(_NetName) ? null : _NetName;
                     _AccountingUnit.ManufDate = String.IsNullOrEmpty(_ManufDate) ? null : DateTime.Parse(_ManufDate);
-                    _AccountingUnit.InvNum = _InvNum;
-                    _AccountingUnit.Comment = _Comment;
+                    _AccountingUnit.InvNum = String.IsNullOrEmpty(_InvNum) ? null : _InvNum;
+                    _AccountingUnit.Comment = String.IsNullOrEmpty(_Comment) ? null : _Comment;
                     if (_AccountingUnit.Id == 0)
                     {
                         _mainModel.AccountingUnitAdd(_AccountingUnit);

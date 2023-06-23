@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SOCIS_MAUI_MODEL.Model
 {
@@ -24,7 +25,14 @@ namespace SOCIS_MAUI_MODEL.Model
         public int RoleId { get; set; }
         public string? Password { get; set; }
         public string? PasswordSalt { get; set; }
-
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                return $"{Surname} {Name}";
+            }
+        }
         public virtual Department? Department { get; set; }
         public virtual Post? Post { get; set; }
         public virtual Role Role { get; set; } = null!;

@@ -21,4 +21,10 @@
     <FlyoutItem Title="Устройства">
         <ShellContent ContentTemplate="{DataTemplate view:AccountingUnitPage}"/>
     </FlyoutItem>
+    <FlyoutItem Title="Краткие перемещения">
+        <ShellContent ContentTemplate="{DataTemplate view:ShortTermMovePage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Ответственные лица">
+        <ShellContent ContentTemplate="{DataTemplate view:UnitRespPersonPage}"/>
+    </FlyoutItem>
 </Shell>

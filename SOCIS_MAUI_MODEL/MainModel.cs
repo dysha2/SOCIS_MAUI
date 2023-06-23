@@ -29,6 +29,7 @@ namespace SOCIS_MAUI_MODEL
         private ObservableCollection<UnitType> _UnitTypes;
         private ObservableCollection<FullNameUnit> _FullNameUnits;
         private ObservableCollection<AccountingUnit> _AccountingUnits;
+        private ObservableCollection<Person> _Persons;
         public MainModel(IConfiguration config)
         {
             _config = config;
@@ -41,12 +42,22 @@ namespace SOCIS_MAUI_MODEL
                 WriteIndented = true
             };
         }
+        #region Person
+        public ObservableCollection<Person> GetAllPersons()
+        {
+            if (_Persons is null)
+            {
+                _Persons = new ObservableCollection<Person>(GetAll<Person>("Person/GetAll").OrderBy(x => x.Surname));
+            }
+            return _Persons;
+        }
+        #endregion
         #region Place
         public ObservableCollection<Place> GetAllPlaces()
         {
             if (_places is null)
             {
-                _places = new ObservableCollection<Place>(GetAll<Place>("Place/GetAll"));
+                _places = new ObservableCollection<Place>(GetAll<Place>("Place/GetAll").OrderBy(x=>x.Name));
             }
             return _places;
         }
@@ -137,24 +148,116 @@ namespace SOCIS_MAUI_MODEL
             _FullNameUnits.Remove(FullNameUnit);
         }
         #endregion
+        #region UnitPlace
+        public ObservableCollection<UnitPlace> GetAllUnitPlaceByUnit(int id)
+        {
+            return new ObservableCollection<UnitPlace>(GetAll<UnitPlace>($"UnitPlace/GetAllByUnit/{id}"));
+        }
+        public ObservableCollection<UnitPlace> GetAllUnitPlaceByPlace(int id)
+        {
+            var unPlaces = new ObservableCollection<UnitPlace>(GetAll<UnitPlace>($"UnitPlace/GetAllOldByPlace/{id}"));
+            foreach(var item in GetAll<UnitPlace>($"UnitPlace/GetAllActiveByPlace/{id}"))
+            {
+                unPlaces.Add(item);
+            }
+            return unPlaces;
+        }
+        public void UnitPlaceDelete(UnitPlace UnitPlace)
+        {
+            Delete($"UnitPlace/Delete/{UnitPlace.Id}");
+        }
+        public void UnitPlaceAdd(UnitPlace UnitPlace)
+        {
+            Add(UnitPlace, "UnitPlace/Add");
+        }
+        public void UnitPlaceUpdate(int UnitPlaceId, UnitPlace newUnitPlace)
+        {
+            var UnitPlaceDTO = new UnitPlace
+            {
+                Id = newUnitPlace.Id,
+                UnitId = newUnitPlace.UnitId,
+                PlaceId = newUnitPlace.PlaceId,
+                Comment = newUnitPlace.Comment,
+                DateStart = newUnitPlace.DateStart,
+                DateEnd = newUnitPlace.DateEnd
+            };
+            Update(UnitPlaceDTO, UnitPlaceId, "UnitPlace/Update");
+        }
+        #endregion
 
+        #region UnitRespPerson
+        public ObservableCollection<UnitRespPerson> GetAllUnitRespPersonByUnit(int id)
+        {
+            return new ObservableCollection<UnitRespPerson>(GetAll<UnitRespPerson>($"UnitRespPerson/GetAllByUnit/{id}"));
+        }
+        public ObservableCollection<UnitRespPerson> GetAllUnitRespPersonByPerson(int id)
+        {
+            var unitRespPeople = new ObservableCollection<UnitRespPerson>(GetAll<UnitRespPerson>($"UnitRespPerson/GetAllActiveByPerson/{id}"));
+            foreach(var item in GetAll<UnitRespPerson>($"UnitRespPerson/GetAllOldByPerson/{id}"))
+            {
+                unitRespPeople.Add(item);
+            }
+            return unitRespPeople;
+        }
+        public void UnitRespPersonDelete(UnitRespPerson UnitRespPerson)
+        {
+            Delete($"UnitRespPerson/Delete/{UnitRespPerson.Id}");
+        }
+        public void UnitRespPersonAdd(UnitRespPerson UnitRespPerson)
+        {
+            Add(UnitRespPerson, "UnitRespPerson/Add");
+        }
+        public void UnitRespPersonUpdate(int UnitRespPersonId, UnitRespPerson newUnitRespPerson)
+        {
+            Update(newUnitRespPerson, UnitRespPersonId, "UnitRespPerson/Update");
+        }
+        #endregion
+        #region ShortTermMove
+        public ObservableCollection<ShortTermMove> GetAllShortTermMoveByUnit(int id)
+        {
+            return new ObservableCollection<ShortTermMove>(GetAll<ShortTermMove>($"ShortTermMove/GetAllByUnit/{id}"));
+        }
+        public ObservableCollection<ShortTermMove> GetAllShortTermMovesActive()
+        {
+            return new ObservableCollection<ShortTermMove>(GetAll<ShortTermMove>($"ShortTermMove/GetAllActive"));
+        }
+        public ObservableCollection<ShortTermMove> GetAllShortTermMoveByPlace(int id)
+        {
+            var unPlaces = new ObservableCollection<ShortTermMove>(GetAll<ShortTermMove>($"ShortTermMove/GetAllOldByPlace/{id}"));
+            foreach (var item in GetAll<ShortTermMove>($"ShortTermMove/GetAllActiveByPlace/{id}"))
+            {
+                unPlaces.Add(item);
+            }
+            return unPlaces;
+        }
+        public void ShortTermMoveDelete(ShortTermMove ShortTermMove)
+        {
+            Delete($"ShortTermMove/Delete/{ShortTermMove.ShortTermMoveId}");
+        }
+        public void ShortTermMoveAdd(ShortTermMove ShortTermMove)
+        {
+            Add(ShortTermMove, "ShortTermMove/Add");
+        }
+        public void ShortTermMoveUpdate(int ShortTermMoveId, ShortTermMove newShortTermMove)
+        {
+            var ShortTermMoveDTO = new ShortTermMove
+            {
+                ShortTermMoveId = newShortTermMove.ShortTermMoveId,
+                UnitId = newShortTermMove.UnitId,
+                PlaceId = newShortTermMove.PlaceId,
+                DateTimeStart = newShortTermMove.DateTimeStart,
+                DateTimeEndFact = newShortTermMove.DateTimeEndFact,
+                DateTimeEndPlan = newShortTermMove.DateTimeEndPlan
+            };
+            Update(ShortTermMoveDTO, ShortTermMoveId, "ShortTermMove/Update");
+        }
+        #endregion
         #region AccountingUnit
         public ObservableCollection<AccountingUnit> GetAllAccountingUnits()
         {
             if (_AccountingUnits is null)
             {
                 _AccountingUnits = new ObservableCollection<AccountingUnit>(GetAll<AccountingUnit>("AccountingUnit/GetAll"));
-                foreach (var unit in _AccountingUnits)
-                {
-                    try
-                    {
-                        unit.CurrentPlace = Get<Place>("Place/GetCurrentPlace", unit.Id);
-                    }
-                    catch 
-                    { 
-                        unit.CurrentPlace = null; 
-                    }
-                }
             }
             return _AccountingUnits;
         }
@@ -189,8 +292,11 @@ namespace SOCIS_MAUI_MODEL
                 Comment = newAccountingUnit.Comment
             };
             Update(AccountingUnitDTO, AccountingUnitId, "AccountingUnit/Update");
-            var oldAccountingUnit = _AccountingUnits.First(x => x.Id == AccountingUnitId);
-            oldAccountingUnit = newAccountingUnit;
+            if (_AccountingUnits is not null)
+            {
+                var oldAccountingUnit = _AccountingUnits.First(x => x.Id == AccountingUnitId);
+                oldAccountingUnit = newAccountingUnit;
+            }
         }
         public void AccountingUnitDelete(AccountingUnit AccountingUnit)
         {

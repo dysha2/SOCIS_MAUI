@@ -13,5 +13,8 @@ namespace SOCIS_MAUI.Services
         public UnitType TransferUnitType { get; set; }
         public FullNameUnit TransferFullNameUnit { get; set; }
         public AccountingUnit TransferAccountingUnit { get; set; }
+        public UnitPlace TransferUnitPlace { get; set; }
+        public ShortTermMove TransferShortTermMove { get; set; }
+        public UnitRespPerson TransferUnitRespPerson { get; set; }
     }
 }

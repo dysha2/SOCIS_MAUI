@@ -1,17 +1,21 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 
 namespace SOCIS_MAUI_MODEL.Model
 {
-    public partial class UnitRespPerson
+    public partial class UnitRespPerson:ObservableObject
     {
         public int Id { get; set; }
         public int UnitId { get; set; }
         public int PersonId { get; set; }
-        public DateTime DateStart { get; set; }
-        public DateTime? DateEnd { get; set; }
-
-        public virtual Person Person { get; set; } = null!;
-        public virtual AccountingUnit Unit { get; set; } = null!;
+        [ObservableProperty]
+        private DateTime _DateStart;
+        [ObservableProperty]
+        private DateTime? _DateEnd;
+        [ObservableProperty]
+        private Person _Person = null!;
+        [ObservableProperty]
+        private AccountingUnit _Unit = null!;
     }
 }

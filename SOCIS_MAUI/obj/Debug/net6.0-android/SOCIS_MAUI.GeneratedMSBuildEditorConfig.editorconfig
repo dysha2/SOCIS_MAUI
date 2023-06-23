@@ -88,6 +88,42 @@ build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.PlacePage.
 build_metadata.AdditionalFiles.TargetPath = View\PlacePage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\PlacePage.xaml
 
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/ShortTermMoveEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.ShortTermMoveEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ShortTermMoveEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ShortTermMoveEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/ShortTermMovePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.ShortTermMovePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ShortTermMovePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ShortTermMovePage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitPlaceEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitPlaceEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitPlaceEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitPlaceEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitPlacePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitPlacePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitPlacePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitPlacePage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitRespPersonEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitRespPersonEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitRespPersonEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitRespPersonEditPage.xaml
+
+[D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitRespPersonPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitRespPersonPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UnitRespPersonPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UnitRespPersonPage.xaml
+
 [D:/MyProgs/SOCIS_MAUI/SOCIS_MAUI/View/UnitTypeEditPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SOCIS_MAUI.View.UnitTypeEditPage.xaml

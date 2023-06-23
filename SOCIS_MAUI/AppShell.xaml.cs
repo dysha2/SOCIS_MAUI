@@ -15,5 +15,11 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(FullNameUnitEditPage), typeof(FullNameUnitEditPage));
         Routing.RegisterRoute(nameof(AccountingUnitPage), typeof(AccountingUnitPage));
         Routing.RegisterRoute(nameof(AccountingUnitEditPage), typeof(AccountingUnitEditPage));
+        Routing.RegisterRoute(nameof(UnitPlacePage), typeof(UnitPlacePage));
+        Routing.RegisterRoute(nameof(UnitPlaceEditPage), typeof(UnitPlaceEditPage));
+        Routing.RegisterRoute(nameof(ShortTermMovePage), typeof(ShortTermMovePage));
+        Routing.RegisterRoute(nameof(ShortTermMoveEditPage), typeof(ShortTermMoveEditPage));
+        Routing.RegisterRoute(nameof(UnitRespPersonPage), typeof(UnitRespPersonPage));
+        Routing.RegisterRoute(nameof(UnitRespPersonEditPage), typeof(UnitRespPersonEditPage));
     }
 }

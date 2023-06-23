@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:SOCIS_MAUI.ViewModel"
+             xmlns:M="clr-namespace:SOCIS_MAUI_MODEL.Model;assembly=SOCIS_MAUI_MODEL"
+             xmlns:handlers="clr-namespace:SOCIS_MAUI.SearchHandlers"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="SOCIS_MAUI.View.UnitPlacePage"
+             x:DataType="VM:UnitPlaceVM"
+             Title="Долгосрочные перемещения">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing"/>
+    </ContentPage.Behaviors>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="+" Command="{Binding AddUnitPlaceCommand}" Margin="10,10,10,0">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsUnitMode}" Value="false">
+                            <Setter Property="IsVisible" Value="false"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Label Text="Только активные"/>
+                <Switch IsToggled="{Binding IsActiveOnly}" HorizontalOptions="Start"/>
+                    <CollectionView ItemsSource="{Binding UnitPlaces}" Margin="10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="M:UnitPlace">
+                            <Frame Margin="0,5,0,5">
+                                <StackLayout Margin="10">
+                                    <Label Text="{Binding Unit.FullNameUnit.UnitType.Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Unit.FullNameUnit.Model,StringFormat='Модель {0}'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Unit.InvNum,StringFormat='Инв. № {0}',TargetNullValue='Инв. № отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Unit.SerNum,StringFormat='Серийный № {0}',TargetNullValue='Серийный № отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Unit.NetName,StringFormat='Имя в сети {0}',TargetNullValue='Имя в сети отсутствует'}" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Place.Name,StringFormat='Место: Кабинет {0}'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding Comment,StringFormat='Комментарий {0}',TargetNullValue='Комментарий отсутствует'}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding DateStart,StringFormat='Дата начала {0:dd/MM/yyyy}'}" HorizontalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding DateEnd,StringFormat='Дата окончания {0:dd/MM/yyyy}',TargetNullValue='Дата окончания отсутствует'}" HorizontalOptions="Center" FontSize="20"/>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={Type VM:UnitPlaceVM}},Path=UnitPlaceUpdateCommand}" CommandParameter="{Binding }"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="назад" Command="{Binding PreviousPageCommand}"/>
+                    <Label Text="{Binding CurrentPage,Converter={StaticResource ValueIncrementConverter}}" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="из" Grid.Column="2" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="{Binding Pages,Converter={StaticResource ValueIncrementConverter}}" Grid.Column="3" HorizontalTextAlignment="Center" FontSize="Large"/>
+                    <Button Text="далее" Command="{Binding NextPageCommand}" Grid.Column="4"/>
+                </Grid>
+        </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
